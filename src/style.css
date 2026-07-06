@@ -38,7 +38,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
-  
+
   /* Sistema Estelar Avançado (Maior Densidade, Brilho e Contraste) */
   background-color: #030306;
   background-image: 
@@ -46,20 +46,59 @@ body {
     radial-gradient(1.5px 1.5px at 40px 60px, #ffffff 100%, transparent),
     radial-gradient(2px 2px at 180px 290px, #ffffff 100%, transparent),
     radial-gradient(1.5px 1.5px at 320px 120px, #ffffff 100%, transparent),
-    
     /* 2. Estrelas Roxas e Violetas com Efeito Glow (Pulsação Visual) */
-    radial-gradient(3.5px 3.5px at 100px 210px, #ffffff 10%, var(--purple) 40%, rgba(139, 92, 246, 0) 100%),
-    radial-gradient(2.5px 2.5px at 290px 350px, var(--purple-bright) 30%, rgba(167, 139, 250, 0.2) 80%, transparent),
-    radial-gradient(3px 3px at 220px 150px, var(--purple) 20%, rgba(139, 92, 246, 0.15) 70%, transparent),
-    
+    radial-gradient(
+        3.5px 3.5px at 100px 210px,
+        #ffffff 10%,
+        var(--purple) 40%,
+        rgba(139, 92, 246, 0) 100%
+      ),
+    radial-gradient(
+      2.5px 2.5px at 290px 350px,
+      var(--purple-bright) 30%,
+      rgba(167, 139, 250, 0.2) 80%,
+      transparent
+    ),
+    radial-gradient(
+      3px 3px at 220px 150px,
+      var(--purple) 20%,
+      rgba(139, 92, 246, 0.15) 70%,
+      transparent
+    ),
     /* 3. Constelações e Micro-Estrelas de Fundo (Profundidade Cósmica) */
-    radial-gradient(1px 1px at 75px 110px, rgba(255, 255, 255, 0.85), transparent),
-    radial-gradient(1.2px 1.2px at 240px 50px, rgba(167, 139, 250, 0.7), transparent),
-    radial-gradient(1px 1px at 260px 230px, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(1.5px 1.5px at 130px 380px, rgba(255, 255, 255, 0.6), transparent);
+    radial-gradient(
+        1px 1px at 75px 110px,
+        rgba(255, 255, 255, 0.85),
+        transparent
+      ),
+    radial-gradient(
+      1.2px 1.2px at 240px 50px,
+      rgba(167, 139, 250, 0.7),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 260px 230px,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 130px 380px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
 
   /* Tamanhos dessincronizados para quebrar a repetição simétrica no scroll */
-  background-size: 480px 480px, 420px 420px, 370px 370px, 480px 480px, 420px 420px, 370px 370px, 480px 480px, 420px 420px, 370px 370px, 450px 450px;
+  background-size:
+    480px 480px,
+    420px 420px,
+    370px 370px,
+    480px 480px,
+    420px 420px,
+    370px 370px,
+    480px 480px,
+    420px 420px,
+    370px 370px,
+    450px 450px;
   background-attachment: fixed;
 }
 /* Custom Scrollbar */
@@ -88,11 +127,11 @@ body {
   height: 2.5px; /* Ligeiramente mais grossa conforme pedido */
   /* Concentra a opacidade total no centro absoluto (50%) e zera nas extremidades */
   background: linear-gradient(
-    to right, 
-    transparent 0%, 
-    rgba(139, 92, 246, 0.2) 20%, 
-    var(--purple) 50%, 
-    rgba(139, 92, 246, 0.2) 80%, 
+    to right,
+    transparent 0%,
+    rgba(139, 92, 246, 0.2) 20%,
+    var(--purple) 50%,
+    rgba(139, 92, 246, 0.2) 80%,
     transparent 100%
   );
   z-index: 10;
@@ -112,7 +151,7 @@ header {
   max-width: 1100px;
   padding: 12px 35px;
   z-index: 1000;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,23 +160,25 @@ header {
   background: rgba(10, 10, 14, 0.55); /* Base escura semi-transparente */
   backdrop-filter: blur(16px) saturate(190%); /* Desfoque profundo do fundo */
   -webkit-backdrop-filter: blur(16px) saturate(190%);
-  
+
   /* Borda sutil reflexiva simulando a lapidação do vidro */
-  border: 1px solid #8a5cf686; 
+  border: 1px solid #8a5cf686;
   border-radius: 100px; /* Formato pílula perfeito */
-  
+
   /* Sombra suave para descolar o menu do conteúdo do fundo */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
-              inset 0 1px 1px rgba(255, 255, 255, 0.05);
-              
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+
   transition: all 0.4s var(--ease);
 }
 
 /* Efeito sutil ao rolar a página (opcional, dá um detalhe extra caso queira) */
 header:hover {
   border-color: rgba(139, 92, 246, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 
-              0 0 15px rgba(139, 92, 246, 0.05);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.7),
+    0 0 15px rgba(139, 92, 246, 0.05);
 }
 .logo {
   font-weight: 900;
@@ -145,10 +186,10 @@ header:hover {
   letter-spacing: -0.5px;
   color: var(--text);
   text-decoration: none;
-  
+
   display: inline-flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   white-space: nowrap;
 }
 
@@ -216,7 +257,6 @@ nav a:hover {
   -webkit-text-stroke: 1.5px var(--purple);
 }
 
-
 nav a {
   margin-left: 30px;
   color: var(--muted);
@@ -257,7 +297,9 @@ h2 span {
 
 /* HERO SECTION */
 .hero {
-  background-image: linear-gradient(rgba(3, 3, 6, 0.75), rgba(5, 5, 5, 0.95)), url("ultrawide_onda_roxa.png");
+  background-image:
+    linear-gradient(rgba(3, 3, 6, 0.75), rgba(5, 5, 5, 0.95)),
+    url("ultrawide_onda_roxa.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -284,7 +326,9 @@ h2 span {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-subtitle {
@@ -542,7 +586,11 @@ h2 span {
 
 .card-inner-divider {
   height: 1px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.08) 0%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 100%
+  );
   margin: 20px 0 25px 0;
 }
 
@@ -592,6 +640,12 @@ h2 span {
   background-size: 400px 400px;
   background-position: center;
 }
+/* ==========================================================================
+   SKILLS SECTION - ROXO NEON COM HOVER REATIVO
+   ========================================================================== */
+.skills-section {
+  position: relative;
+}
 
 .skills-grid {
   display: grid;
@@ -604,25 +658,31 @@ h2 span {
   background: #08080d;
   padding: 20px 10px;
   border-radius: 6px;
-  border: 1.5px solid #8b5cf6;
-  
+  border: 1.5px solid #8b5cf6; /* Sua borda padrão `--purple` */
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  
+
   aspect-ratio: 1 / 1;
   transition: all 0.3s var(--ease);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Estado Padrão: Ícone forçado em Roxo Neon */
+/* ESTADO PADRÃO: Força qualquer ícone colorido a se transformar 
+   exatamente na cor da sua borda (#8b5cf6)
+*/
 .skill-item img {
   width: 42px;
   height: 42px;
-  filter: brightness(0) invert(46%) sepia(84%) saturate(1630%) hue-rotate(233deg) brightness(97%) contrast(98%);
-  transition: transform 0.3s var(--ease), filter 0.2s ease-in-out;
+  /* Filtro calibrado especificamente para gerar o tom hexadecimal #8b5cf6 */
+  filter: invert(44%) sepia(91%) saturate(3015%) hue-rotate(242deg)
+    brightness(97%) contrast(98%);
+  transition:
+    transform 0.3s var(--ease),
+    filter 0.3s var(--ease);
 }
 
 .skill-item span {
@@ -642,22 +702,23 @@ h2 span {
 /* Interação ao passar o mouse (Hover) */
 .skill-item:hover {
   transform: translateY(-4px);
-  border-color: #c0a8ff;
+  border-color: var(--purple-bright);
   background: rgba(139, 92, 246, 0.05);
   box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
 }
 
-/* O Pulo do Gato: Desativa o filtro roxo e traz a cor original de volta instantaneamente */
+/* Efeito Premium: Desativa o filtro roxo e traz a cor original 
+   da tecnologia de volta instantaneamente ao passar o mouse
+*/
 .skill-item:hover img {
-  filter: none;
-  transform: scale(1.08); /* Um leve pulinho no ícone para dar dinamismo */
+  filter: none; /* Retorna à cor nativa do logo (Ex: Amarelo/Azul do Python) */
+  transform: scale(1.08); /* Leve pulo dinâmico */
 }
 
-/* O texto acende em branco puro para dar contraste com o logo colorido */
+/* O texto acende em branco puro no hover para contrastar com o ícone colorido */
 .skill-item:hover span {
   color: #ffffff;
 }
-
 /* ==========================================================================
    PROJECTS SECTION - GRAFOS MATEMÁTICOS E CURVAS DE PREDIÇÃO (LOSS/ML)
    ========================================================================== */
@@ -769,7 +830,7 @@ h2 span {
 
 /* ==========================================================================
    CONTACT SECTION - ENGENHARIA DE FLUXO DE COMPUTAÇÃO
-   ========================================================================== *//* ==========================================================================
+   ========================================================================== */ /* ==========================================================================
    CONTACT SECTION - ENGENHARIA DE FLUXO DE COMPUTAÇÃO
    ========================================================================== */
 .contact-section {
@@ -869,35 +930,61 @@ footer {
 
 /* RESPONSIVIDADE */
 @media (max-width: 1000px) {
-  section { padding: 100px 6vw; }
+  section {
+    padding: 100px 6vw;
+  }
   .hero {
     flex-direction: column-reverse;
     text-align: center;
     padding: 140px 6vw 60px;
   }
-  .profile-wrapper { justify-content: center; }
-  .hero-subtitle { margin: 0 auto 35px; }
-  .btn-group { justify-content: center; }
-  .card-container { width: 290px; height: 380px; }
-  h2 { font-size: 2.2rem; }
-  footer { flex-direction: column; gap: 20px; }
+  .profile-wrapper {
+    justify-content: center;
+  }
+  .hero-subtitle {
+    margin: 0 auto 35px;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+  .card-container {
+    width: 290px;
+    height: 380px;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 850px) {
-  .experience-grid { grid-template-columns: 1fr; gap: 35px; }
-  .exp-vertical-accent-line { display: none; }
-  .exp-tabs-column { padding-left: 0; }
-  .exp-tabs { flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
-  .tab-btn { white-space: nowrap; }
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .exp-vertical-accent-line {
+    display: none;
+  }
+  .exp-tabs-column {
+    padding-left: 0;
+  }
+  .exp-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  .tab-btn {
+    white-space: nowrap;
+  }
 }
-
-
 
 /* ==========================================================================
    OTIMIZAÇÃO PREMIUM EXCLUSIVA PARA IPHONE & SMARTPHONES (Até 440px)
    ========================================================================== */
 @media (max-width: 440px) {
-  
   /* 1. Suporte a Safe Areas do iOS (Notch, Dynamic Island e Barra de Home) */
   body {
     padding-left: env(safe-area-inset-left);
@@ -959,8 +1046,8 @@ footer {
   .card-container {
     width: 100%;
     max-width: 290px; /* Cabe perfeitamente em qualquer modelo */
-    height: 390px;    /* Altura proporcional à nova largura */
-    margin: 0 auto;   /* Centraliza perfeitamente */
+    height: 390px; /* Altura proporcional à nova largura */
+    margin: 0 auto; /* Centraliza perfeitamente */
   }
 
   .side {
@@ -970,7 +1057,7 @@ footer {
   /* 5. Grids Adaptados para Touch */
   .skills-grid {
     /* Em vez de quebrar itens pequenos, exibe em 2 colunas simétricas */
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
@@ -978,21 +1065,23 @@ footer {
     padding: 15px 8px;
     aspect-ratio: 1 / 1;
   }
-  
+
   .skill-item img {
     width: 32px;
     height: 32px;
   }
 
-  .grid, .contact-grid {
+  .grid,
+  .contact-grid {
     grid-template-columns: 1fr; /* Força uma coluna única e limpa */
     gap: 16px;
   }
 
-  .project-card, .contact-item {
+  .project-card,
+  .contact-item {
     padding: 25px;
   }
-  
+
   /* Ajuste no rodapé */
   footer {
     padding: 40px 5vw;
@@ -1009,11 +1098,11 @@ footer {
   font-size: 1.1rem;
   letter-spacing: -0.5px;
   color: var(--text);
-  
+
   /* Alinha o lobo perfeitamente no centro vertical com o seu nome */
   display: inline-flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   white-space: nowrap; /* Impede o nome de quebrar em duas linhas */
 }
 
@@ -1077,7 +1166,7 @@ footer {
   .exp-tabs-column {
     padding-left: 0;
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   /* Contêiner de abas horizontal ultra responsivo */
@@ -1120,7 +1209,6 @@ footer {
 
 /* Otimização cirúrgica para iPhones e Smartphones menores */
 @media (max-width: 440px) {
-  
   /* --- Modificação do Header Mobile --- */
   header {
     width: calc(100% - 16px);
@@ -1203,9 +1291,10 @@ footer {
   }
 }
 @media (max-width: 440px) {
-  
   header {
-    width: calc(100% - 16px); /* Aproveita o máximo de espaço lateral no celular */
+    width: calc(
+      100% - 16px
+    ); /* Aproveita o máximo de espaço lateral no celular */
     padding: 8px 12px;
     top: 10px;
     gap: 4px;
@@ -1224,7 +1313,7 @@ footer {
   .logo .first-name {
     display: none !important;
   }
-  
+
   /* Mantém o "De Castro" destacado com a cor do seu tema */
   .logo .last-name {
     color: var(--purple);
