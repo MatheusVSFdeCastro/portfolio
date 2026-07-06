@@ -1068,7 +1068,7 @@ footer {
    ========================================================================== */
 
 /* 1. Ajuste para Tablets e Telas Médias (Até 850px) */
-@media (max-width: 920px) {
+@media (max-width: 850px) {
   .experience-grid {
     grid-template-columns: 1fr; /* Transforma as duas colunas em uma única coluna vertical */
     gap: 25px;
