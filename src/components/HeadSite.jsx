@@ -1,21 +1,36 @@
 function HeadSite({
   nome = "Matheus",
   sobrenome = "de Castro",
-  lobo = "src/assets/img/wolf(2).png",
+  lobo = "./assets/img/wolf(2).png", // Remova o caminho estático daqui, pois ele já vem via prop do Home.jsx
   isHobbies = false,
+  onBackToHome, // Adicione essa prop para controlar o clique
 }) {
+  const handleLogoClick = (e) => {
+    if (isHobbies) {
+      e.preventDefault(); // Impede o navegador de recarregar a página index.html
+      onBackToHome(); // Executa a função que muda o estado para voltar à Home
+    }
+  };
+
   return (
     <header>
-      <a href={isHobbies ? "index.html" : "#"} className="logo">
+      <a
+        href={isHobbies ? "#" : "#"}
+        onClick={handleLogoClick}
+        className="logo"
+      >
         <img src={lobo} className="logo-icon" alt="Lobo" />
-        <span className="className-name">{nome}</span>
+        <span className="first-name">{nome}</span>{" "}
+        {/* Corrigido de className-name para first-name */}
         <span className="last-name">{sobrenome}</span>
       </a>
 
       <nav>
         {isHobbies ? (
           <>
-            <a href="index.html">Home</a>
+            <a href="#" onClick={handleLogoClick}>
+              Home
+            </a>
             <a href="index.html#projects">Works</a>
             <a href="#art-gallery">Arts</a>
           </>

@@ -13,7 +13,7 @@ import logoWolf from "./assets/img/wolf(2).png";
 import fotoAlomyr from "./assets/img/alomyr.jpeg";
 import cvMatheus from "./docs/Matheus Vinicius Silva Freire de Castro.pdf";
 
-function Home({ onNavigateToHobbies }) {
+function Home({ onNavigateToHobbies, onBackToHome }) {
   const dados = {
     nome: "Matheus",
     sobrenome: "de Castro",
@@ -82,6 +82,8 @@ function Home({ onNavigateToHobbies }) {
             nome={dados.nome}
             sobrenome={dados.sobrenome}
             lobo={imageWolf}
+            isHobbies={false}
+            onBackToHome={onBackToHome}
             description={descriptionPerfil}
           />{" "}
           <Perfil

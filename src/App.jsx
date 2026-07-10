@@ -4,15 +4,19 @@ import Hobbies from "./Hobbies";
 
 function App() {
   // Estado que define qual página renderizar: 'home' ou 'hobbies'
-  const [currentPage, setCurrentPage] = useState("home");
+  // Exemplo de como deve estar no seu arquivo pai (App.jsx)
+  const [isHobbies, setIsHobbies] = useState(false);
 
-  // Se o estado for 'hobbies', renderiza a página de Hobbies
-  if (currentPage === "hobbies") {
-    return <Hobbies onNavigate={() => setCurrentPage("home")} />;
+  if (isHobbies) {
+    return <Hobbies onBackToHome={() => setIsHobbies(false)} />;
   }
 
-  // Caso contrário, renderiza a Home normal, passando a função para abrir os hobbies
-  return <Home onNavigateToHobbies={() => setCurrentPage("hobbies")} />;
+  return (
+    <Home
+      onNavigateToHobbies={() => setIsHobbies(true)}
+      onBackToHome={() => setIsHobbies(false)} // Passa a função aqui
+    />
+  );
 }
 
 export default App;
