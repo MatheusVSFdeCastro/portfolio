@@ -1,14 +1,14 @@
 function HeadSite({
   nome = "Matheus",
   sobrenome = "de Castro",
-  lobo = "./assets/img/wolf(2).png", // Remova o caminho estático daqui, pois ele já vem via prop do Home.jsx
+  lobo = "./assets/img/wolf(2).png",
   isHobbies = false,
-  onBackToHome, // Adicione essa prop para controlar o clique
+  onBackToHome,
 }) {
   const handleLogoClick = (e) => {
     if (isHobbies) {
-      e.preventDefault(); // Impede o navegador de recarregar a página index.html
-      onBackToHome(); // Executa a função que muda o estado para voltar à Home
+      e.preventDefault();
+      onBackToHome();
     }
   };
 
@@ -21,7 +21,6 @@ function HeadSite({
       >
         <img src={lobo} className="logo-icon" alt="Lobo" />
         <span className="first-name">{nome}</span>{" "}
-        {/* Corrigido de className-name para first-name */}
         <span className="last-name">{sobrenome}</span>
       </a>
 
