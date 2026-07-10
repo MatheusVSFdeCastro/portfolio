@@ -1491,7 +1491,7 @@ footer {
 body {
   background-image:
     linear-gradient(rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.9)),
-    url("src/ultrawide_onda_roxa.png");
+    url("/img/ultrawide_onda_roxa.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
